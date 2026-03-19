@@ -20,3 +20,25 @@ const MENU_ITEMS = [
   { label: 'Click to open my X (twitter) profile',        url: X_URL },
   { label: 'exit',                                         url: null },
 ];
+
+function getOpenCmd(platform) {
+  if (platform === 'win32') return 'start';
+  if (platform === 'darwin') return 'open';
+  return 'xdg-open';
+}
+
+function open(url) {
+  const isWin = process.platform === 'win32';
+  const cmd   = getOpenCmd(process.platform);
+  const child = spawn(cmd, [url], {
+    detached: !isWin,
+    shell:     isWin,
+    stdio:    'ignore',
+  });
+  child.unref();
+}
+
+if (!process.stdin.isTTY) {
+  console.log(`benmertu: ${GITHUB_URL} | ${X_URL}`);
+  process.exit(0);
+}
