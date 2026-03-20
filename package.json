@@ -16,5 +16,10 @@
   ],
   "scripts": {
     "test": "node test.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mertuykuseven/benmertu.git"
+  },
+  "homepage": "https://github.com/mertuykuseven/benmertu#readme"
 }
