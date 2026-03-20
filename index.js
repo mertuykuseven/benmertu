@@ -16,8 +16,8 @@ const ASCII_ART = `
 `;
 
 const MENU_ITEMS = [
-  { label: 'Click to open Github Profile on your browser', url: GITHUB_URL },
-  { label: 'Click to open my X (twitter) profile',        url: X_URL },
+  { label: 'Click to open my Github', url: GITHUB_URL },
+  { label: 'Click to open my X (Twitter)',        url: X_URL },
   { label: 'exit',                                         url: null },
 ];
 
