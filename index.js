@@ -4,7 +4,7 @@
 const readline = require('readline');
 const { spawn } = require('child_process');
 
-const GITHUB_URL = 'https://github.com/mertuykuseven';
+const GITHUB_URL = 'https://github.com/benmertu';
 const X_URL      = 'https://x.com/benmertu';
 
 const ASCII_ART = `
